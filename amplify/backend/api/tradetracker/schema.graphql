@@ -1,0 +1,14 @@
+type Trade @model {
+  id: ID!
+  ticker: String!
+  dateOpened: AWSDate!
+  dateClosed: AWSDate
+  PNL: Float
+  priceFilledPerLot: Float!
+  marginBPRPerLot: Float!
+  strategy: String!
+  expiration: AWSDate!
+  numberOfLots: Int!
+  note: String
+  image: String
+}

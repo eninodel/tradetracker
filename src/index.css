@@ -1,13 +1,80 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --amplify-primary-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*:focus {
+  outline: none;
 }
+
+nav {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+nav button {
+  border: none;
+  color: white;
+  background: none;
+  width: 100%;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.homepage .displaytrades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.tradeCard {
+  width: 300px;
+  padding: 15px;
+  border-radius: 15px;
+  border-style: none;
+  margin-top: 10px;
+  justify-self: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.tradeCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+input,
+select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+form input,
+form select {
+  color: grey;
+  margin-top: 10px;
+  width: 80%;
+  max-width: 800px;
+  border: solid;
+  border-radius: 15px;
+  height: 80px;
+  padding: 0px 20px 0px 20px;
+}
+
+/*# sourceMappingURL=index.css.map */

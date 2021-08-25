@@ -1,16 +1,24 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import HomePage from "./HomePage";
+import CreateTrade from "./CreateTrade";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello from V2</h1>
-      </header>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+            <AmplifySignOut />
+          </Route>
+          <Route path="/createtrade">
+            <CreateTrade />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
