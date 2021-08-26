@@ -3,6 +3,7 @@ import { API, Storage } from "aws-amplify";
 import { listTrades } from "./graphql/queries";
 import TradeCard from "./TradeCard";
 import { useHistory } from "react-router-dom";
+import uuid from "react-uuid";
 
 function HomePage() {
   let history = useHistory();
@@ -39,7 +40,14 @@ function HomePage() {
       </nav>
       <div className="displaytrades">
         {trades.map((trade) => {
-          return <TradeCard {...trade} />;
+          return (
+            <TradeCard
+              {...trade}
+              trades={trades}
+              setTrades={setTrades}
+              key={uuid()}
+            />
+          );
         })}
       </div>
     </div>

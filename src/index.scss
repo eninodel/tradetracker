@@ -1,6 +1,4 @@
-$tradecard-width: 300px;
-$default-boxshadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-@import "~bootstrap/scss/bootstrap";
+@import "./custom.scss";
 
 body {
   margin: 0;
@@ -10,11 +8,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // -ms-box-sizing: content-box;
-  // -moz-box-sizing: content-box;
-  // -webkit-box-sizing: content-box;
-  // box-sizing: content-box;
   --amplify-primary-color: black;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-group {
+  margin-top: 10px;
+  width: 90%;
+  max-width: 800px;
+}
+input[type="file"],
+button {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+.form-select {
+  padding: 1rem 0.75rem;
+  padding-top: 1rem;
+  padding-right: 0.75rem;
+  padding-bottom: 1rem;
+  padding-left: 0.75rem;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.btn-group {
+  width: 100%;
+}
+
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-width: 300px;
+  max-width: 600px;
+  width: 90%;
+  justify-self: center;
 }
 
 *:focus {
@@ -41,47 +75,6 @@ nav {
   justify-content: space-evenly;
   .displaytrades {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax($tradecard-width, 1fr));
-  }
-}
-
-.tradeCard {
-  width: $tradecard-width;
-  padding: 15px;
-  border-radius: 15px;
-  border-style: none;
-  margin-top: 10px;
-  justify-self: center;
-  box-shadow: $default-boxshadow;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-  }
-}
-input,
-select {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-form {
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  input,
-  select {
-    color: grey;
-    margin-top: 10px;
-    width: 80%;
-    max-width: 800px;
-    border: solid;
-    border-radius: 15px;
-    height: 80px;
-    padding: 0px 20px 0px 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
