@@ -1,5 +1,4 @@
 import React from "react";
-import ModalImage from "react-modal-image";
 import { useState } from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
